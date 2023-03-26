@@ -8,8 +8,9 @@
 
 
 
+#include <leon3_uart.h>
 #include "leon3_bprint.h"
-#include <stdio.h>
+//#include <stdio.h>
 
 int8_t leon3_print_string(char* str) {
 	// recorrer la cadena hasta su final escribiendo
