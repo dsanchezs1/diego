@@ -61,10 +61,18 @@ void TCalculatePath(void)
 	leon3_print_string("End Calculate Path\n");
 }
 // Definición de las macros de configuración
-#define CYClIC_EXECUTIVE_PERIOD_IN_TICKS 20
-#define CYClIC_EXECUTIVE_HYPER_PERIOD 6
+
+// Esto hay que cambiarlo, has dejado lo mismo que en la 4.2
+// #define CYClIC_EXECUTIVE_PERIOD_IN_TICKS 20
+// #define CYClIC_EXECUTIVE_HYPER_PERIOD 6
+
+#define CYClIC_EXECUTIVE_PERIOD_IN_TICKS 100
+#define CYClIC_EXECUTIVE_HYPER_PERIOD 4
 #define CYClIC_EXECUTIVE_TASKS_NUMBER 3
+
 // Array bidimensional para definir la secuencia de tareas del ejecutivo cíclico
+
+// Que son Task1, Task2 y Task3 ????????????????????????????
 void (*cyclic_executive [CYClIC_EXECUTIVE_HYPER_PERIOD]
                          	 	 	   [CYClIC_EXECUTIVE_TASKS_NUMBER+1])(void)={
                          	 	 			   	   	 {Task1,Task2,Task3,NULL},
