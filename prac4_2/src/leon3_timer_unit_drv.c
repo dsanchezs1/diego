@@ -144,6 +144,9 @@ uint8_t leon3_timer_config(uint8_t timerId
 
 		// Fuerza la carga en CounterValue del timerId con el valor escrito en el registro ReloadValue
 		// Force CounterValue of the timerId is loaded with the value of ReloadValue register
+		
+		pLEON3_TimerUnit_REGS->Timer[timerId].ReloadValue=timerValue; // OJO hay que decir que valor queremos recargar
+		
 		pLEON3_TimerUnit_REGS->Timer[timerId].Ctrl|=LEON3_TIMER_LOAD_TIMER;
 
 	}else
