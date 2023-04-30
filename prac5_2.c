@@ -208,6 +208,8 @@ rtems_task TAvoidObstacles(rtems_task_argument unused) {
 
 while (1) {
 
+	// Donde está el semáforo???????????????
+	
 		puts("\nT1 Do Avoid Obstacles");
 		printf(" - rtems_ticks_since_boot - %i\n", get_ticks_since_boot());
 		ticks += 10;
